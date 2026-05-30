@@ -1,0 +1,25 @@
+<ion-app>
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <!-- Segment pegajoso en el header, así siempre visible mientras navegas -->
+      <ion-segment [value]="selectedSegment" (ionChange)="segmentChanged($event)" scrollable="true">
+        <ion-segment-button value="inicio">
+          <ion-icon name="flash-outline"></ion-icon>
+          <ion-label>Inicio</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="personal">
+          <ion-icon name="layers-outline"></ion-icon>
+          <ion-label>Personal</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="contacto">
+          <ion-icon name="at-outline"></ion-icon>
+          <ion-label>Contacto</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content scrollY="true">
+    <ion-router-outlet></ion-router-outlet>
+  </ion-content>
+</ion-app>

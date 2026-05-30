@@ -1,0 +1,27 @@
+:root {
+  --prism-gradient: linear-gradient(135deg, #6366F1 0%, #A855F7 100%);
+  --prism-glow: 0 8px 32px rgba(99, 102, 241, 0.35);
+  --prism-radius: 24px;
+  --prism-radius-sm: 16px;
+
+  --ion-background-color: #0F0A1A;
+  --ion-background-color-rgb: 15, 10, 26;
+  --ion-text-color: #E2E8F0;
+  --ion-text-color-rgb: 226, 232, 240;
+  --ion-color-primary: #6366F1;
+  --ion-color-primary-rgb: 99, 102, 241;
+  --ion-color-primary-contrast: #FFFFFF;
+  --ion-color-primary-shade: #5558DE;
+  --ion-color-primary-tint: #7C7FF5;
+  --ion-item-background: rgba(255, 255, 255, 0.05);
+  --ion-card-background: rgba(255, 255, 255, 0.08);
+  --ion-toolbar-background: rgba(15, 10, 26, 0.9);
+}
+
+.ion-color-prism {
+  --ion-color-base: var(--prism-gradient);
+  --ion-color-base-rgb: 99, 102, 241;
+  --ion-color-contrast: #FFFFFF;
+  --ion-color-shade: #5558DE;
+  --ion-color-tint: #A855F7;
+}

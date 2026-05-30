@@ -1,0 +1,77 @@
+<div class="contact-section">
+  <div class="section-header">
+    <h1 class="title">
+      <span class="prism-text">Contacto</span>
+    </h1>
+    <p class="subtitle">Dejame un mensaje y te respondo a la brevedad</p>
+  </div>
+
+  <!-- Éxito al enviar -->
+  @if (sent) {
+  <div class="success-card">
+    <ion-icon name="checkmark-circle-outline"></ion-icon>
+    <h3>Mensaje enviado</h3>
+    <p>Gracias por escribirme. Te responderé pronto.</p>
+  </div>
+  }
+
+  <form [formGroup]="contactForm" (ngSubmit)="sendEmail()" class="contact-form">
+    <div class="input-wrapper">
+      <ion-icon name="person-outline" class="input-icon"></ion-icon>
+      <ion-input formControlName="from_name" label="Nombre" labelPlacement="floating" fill="outline"
+        placeholder="Tu nombre"></ion-input>
+    </div>
+
+    @if (contactForm.get('from_name')?.invalid && contactForm.get('from_name')?.touched) {
+    <span class="error-msg">El nombre es obligatorio</span>
+    }
+
+    <div class="input-wrapper">
+      <ion-icon name="mail-outline" class="input-icon"></ion-icon>
+      <ion-input formControlName="from_email" label="Correo" labelPlacement="floating" fill="outline" type="email"
+        placeholder="tucorreo@ejemplo.com"></ion-input>
+    </div>
+
+    @if (contactForm.get('from_email')?.invalid && contactForm.get('from_email')?.touched) {
+    <span class="error-msg">
+      @if (contactForm.get('from_email')?.errors?.['required']) {
+      El correo es obligatorio
+      } @else {
+      Formato de correo inválido
+      }
+    </span>
+    }
+
+    <div class="input-wrapper textarea-wrapper">
+      <ion-icon name="chatbubble-outline" class="input-icon textarea-icon"></ion-icon>
+      <ion-textarea formControlName="message" label="Mensaje" labelPlacement="floating" fill="outline" rows="5"
+        placeholder="Escribí tu mensaje aquí..."></ion-textarea>
+    </div>
+
+    @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+    <span class="error-msg">El mensaje no puede estar vacío</span>
+    }
+
+    <ion-button type="submit" expand="block" class="prism-btn send-btn" [disabled]="contactForm.invalid || loading">
+      @if (loading) {
+      <ion-spinner name="crescent"></ion-spinner>
+      <span>Enviando...</span>
+      } @else {
+      <ion-icon slot="start" name="send-outline"></ion-icon>
+      <span>Enviar mensaje</span>
+      }
+    </ion-button>
+  </form>
+
+  <!-- Info de contacto directo -->
+  <div class="contact-alt">
+    <div class="alt-item">
+      <ion-icon name="mail-outline"></ion-icon>
+      <span>mariam@email.com</span>
+    </div>
+    <div class="alt-item">
+      <ion-icon name="logo-github"></ion-icon>
+      <span>github.com/Ayralem</span>
+    </div>
+  </div>
+</div>

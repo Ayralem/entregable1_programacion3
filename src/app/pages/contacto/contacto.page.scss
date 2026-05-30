@@ -1,0 +1,113 @@
+.contact-section {
+  padding: 32px 20px 40px;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.success-card {
+  background: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  border-radius: 20px;
+  padding: 16px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.success-card ion-icon {
+  font-size: 32px;
+  color: #34D399;
+  margin-bottom: 4px;
+}
+
+.success-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 2px;
+  color: #E2E8F0;
+}
+
+.success-card p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.contact-form {
+  margin-bottom: 32px;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.input-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.3);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.textarea-icon {
+  top: 20px;
+  transform: none;
+}
+
+.error-msg {
+  display: block;
+  font-size: 12px;
+  color: #FB7185;
+  margin: 0 0 12px 4px;
+}
+
+.send-btn {
+  margin-top: 8px;
+  --border-radius: 24px !important;
+  min-height: 52px;
+  font-size: 16px;
+}
+
+.send-btn ion-spinner {
+  margin-right: 8px;
+  --color: #fff;
+}
+
+.contact-alt {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.alt-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.alt-item ion-icon {
+  font-size: 18px;
+  color: #6366F1;
+}
